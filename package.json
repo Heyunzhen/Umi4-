@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "author": "heyunzheng <hyz@yuyuancm.cn>",
+  "scripts": {
+    "dev": "max dev",
+    "dev:test":"cross-env UMI_ENV=test max dev",
+    "build": "max build",
+    "postinstall": "max setup",
+    "setup": "max setup",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "@ant-design/pro-layout": "^7.16.1",
+    "@umijs/max": "^4.0.72",
+    "antd": "^5.7.0",
+    "cross-env": "^7.0.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "typescript": "^5.0.3"
+  }
+}

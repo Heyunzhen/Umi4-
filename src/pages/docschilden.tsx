@@ -1,9 +1,12 @@
 import React, { memo, useEffect, useCallback, useMemo } from 'react';
-import {useParams} from "umi"
-import { Outlet } from 'umi'
+import {useSearchParams} from "umi"
+import {PageContainer} from "@ant-design/pro-components"
 export default memo(() => {
-    let p = useParams()
-    return <div>
-        2423423423
-    </div>
+    let [SearchParams,setSearchParams] = useSearchParams()
+    useEffect(()=>{
+        console.log(SearchParams.get('id'))
+    },[])
+    return <PageContainer>
+        <p>2423423423</p>
+    </PageContainer>
 });

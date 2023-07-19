@@ -9,11 +9,14 @@ export default defineConfig({
   define:{
     NAME:"测试"
   },
+  initialState:{},
+  model:{},
   routes: [
     { path: "/", component: "index",name:'首页',hideInMenu:true },
     { 
       path: "/docs",
       name:'文档',
+      redirect:'/docs/list',
       routes:[
         {
           path: "/docs/list",

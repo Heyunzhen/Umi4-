@@ -1,10 +1,9 @@
 import { defineConfig } from "@umijs/max"
-
+import zh from "antd/es/locale/zh_CN"
 export default defineConfig({
   layout:{},
   antd:{
-    configProvider: {},
-    appConfig:{}
+    configProvider: {}
   },
   define:{
     NAME:"测试"
@@ -16,7 +15,6 @@ export default defineConfig({
     { 
       path: "/docs",
       name:'文档',
-      redirect:'/docs/list',
       routes:[
         {
           path: "/docs/list",

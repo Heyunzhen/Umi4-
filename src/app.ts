@@ -1,18 +1,15 @@
 // app.ts
 import { RuntimeAntdConfig } from 'umi';
 import { RunTimeLayoutConfig } from '@umijs/max';
-import zh from "antd/es/locale/zh_CN"
+import zh from "antd/locale/zh_CN"
 import { theme } from 'antd';
+import dayjs from "dayjs";
+import "dayjs/locale/zh-cn";
+dayjs.locale('zh-cn')
 export const antd: RuntimeAntdConfig = (memo) => {
   memo.theme ??= {};
   memo.theme.algorithm = theme.defaultAlgorithm; // 配置 antd5 的预设 dark 算法
   memo.locale = zh
-  memo.appConfig = {
-    message: {
-      // 配置 message 最大显示数，超过限制时，最早的消息会被自动关闭
-      maxCount: 3,
-    }
-  }
   return memo;
 };
  
